@@ -10,11 +10,11 @@
 </head>
 <body>
 
-    <div id="miapp"></div>
+    <div id="miapp">
         <div class="container">
 
             <div class="immagine-grande">
-                <div v-for="(element) in items">
+                <div v-for="(element,index) in items" class="">
                     <img :src="element"> 
                 </div>
             </div>
