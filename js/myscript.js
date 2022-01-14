@@ -36,7 +36,7 @@ let app = new Vue ({
             if(indexImmagini == this.corrente){
                 return "active";
             }
-            return ""
+            return "";
             
         },
         next: function(){

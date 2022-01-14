@@ -14,7 +14,7 @@
         <div class="container">
 
             <div class="immagine-grande">
-                <img v-for="(element,index) in elementi" :src="element.image" :class="isCorrente(index)"> 
+                <img v-for="(element,index) in elementi" class="item" :src="element.image" :class="isCorrente(index)"> 
             <!-- <h1>{{elementi.titolo}}</h1>
             <h2>{{elementi.testo}}</h2> -->
             </div>
@@ -31,7 +31,7 @@
             <div class="down">
                 <i @click="next" class="fas fa-chevron-down"></i>
             </div>
-
+            
         </div>
     </div>
 
