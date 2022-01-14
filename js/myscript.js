@@ -2,38 +2,58 @@ let app = new Vue ({
     el : '#miapp',
     data : {
         corrente:0,
-        items : [
-            'img/01.jpg',
-            'img/02.jpg',
-            'img/03.jpg',
-            'img/04.jpg',
-            'img/05.jpg'
-            ],
-        title : [
-            'Svezia',
-            'Svizzera',
-            'Gran Bretagna',
-            'Germania',
-            'Paradise'
-            ],
-        text : [
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-            'Lorem ipsum',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-            'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-            ]    
-        
+        elementi : [
+            {
+                image : 'img/01.jpg',
+                titolo: 'Svezia',
+                testo : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+            },
+            {
+                image : 'img/02.jpg',
+                titolo: 'Svizzera',
+                testo : 'Lorem ipsum',
+            },
+            {
+                image : 'img/03.jpg',
+                titolo: 'Gran Bretagna',
+                testo : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+            },
+            {
+                image : 'img/04.jpg',
+                titolo: 'Germania',
+                testo : 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+            },
+            {
+                image : 'img/05.jpg',
+                titolo: 'Paradise',
+                testo : 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+            }
+        ]
+    } ,
+    
+    methods: {
+        isCorrente: function(indexImmagini){
+            if(indexImmagini == this.corrente){
+                return "active";
+            }
+            return ""
+            
         },
-    // methods: {
-    //     isCorrente:function(indexImmagine){
-    //         if(indexImmagine == this.corrente){
-    //             return "active"
-    //         }
-    //         return "";
-    //     }
-    // }
-    });
+        next: function(){
+            this.corrente++;
+            if(this.corrente == this.elementi.lenght){
+                this.corrente = 0;
+            }
+        },
+        prev: function(){
+            this.corrente --;
+            if (this.corrente < 0){
+                this.corrente = this.elementi.lenght;
+            }
+        }
+    }
+});
+
 
 
 // const items = [

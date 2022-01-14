@@ -36,6 +36,7 @@ h2{
     justify-content: center;
     align-items: center;
     transform: translate(0%,40%);
+    flex-wrap: wrap;
     
 }
 .immagine-grande .grande{
@@ -99,7 +100,8 @@ h2{
     text-align: center;
     padding: 3px;
     transform: translate(95px);
-    top: 5px;
+    right: 405px;
+    margin-bottom: 52px;
 }
 
 .down{
@@ -113,5 +115,6 @@ h2{
     text-align: center;
     padding: 6px;
     transform: translate(95px);
-    bottom: 5px;
+    bottom: -20px;
+    right: 405px;
 } 
