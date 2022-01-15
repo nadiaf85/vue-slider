@@ -13,19 +13,26 @@
     flex-direction: row;
 }
 
-h2{
-    width: 100%;
+.testo{
+    position: absolute;
+    top: 440px;
+    height: 250px;
+    color: white;
+    font-size: 15px;
+    text-align: end;
+    width: 98%;
     font-weight: 100;
 }
 
-.text{
+.titolo{
     position: absolute;
-    top: 410px;
-    height: 356px;
+    top: 415px;
+    height: 250px;
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     text-align: end;
     width: 98%;
+    font-weight: bold;
 }
 
 
@@ -72,6 +79,7 @@ h2{
 .piccola{
     width: 100%;
     height:  calc(100% / 5);
+    display: block;
 }
 
 .pic{

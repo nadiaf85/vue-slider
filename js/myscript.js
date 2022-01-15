@@ -37,7 +37,6 @@ let app = new Vue ({
                 return "active";
             }
             return "";
-            
         },
         next: function(){
             this.corrente++;
@@ -48,7 +47,7 @@ let app = new Vue ({
         prev: function(){
             this.corrente --;
             if (this.corrente < 0){
-                this.corrente = this.elementi.lenght;
+                this.corrente = this.elementi.lenght -1;
             }
         }
     }

@@ -14,12 +14,11 @@
         <div class="container">
 
             <div class="immagine-grande">
-                <img v-for="(element,index) in elementi" class="item" :src="element.image" :class="isCorrente(index)"> 
-            <!-- <h1>{{elementi.titolo}}</h1>
-            <h2>{{elementi.testo}}</h2> -->
+                <img v-for="(element,index) in elementi" class="item" :src="element.image" :class="isCorrente(index)">
+                <h1 class="titolo">{{elementi[corrente].titolo}}</h1>
+                <h2 class="testo">{{elementi[corrente].testo}}</h2>
             </div>
-
-
+            
             <div class="immagine-piccola">
                 <img v-for="(element) in elementi" :src="element.image" class="piccola">    
             </div>
