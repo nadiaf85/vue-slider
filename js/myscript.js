@@ -1,7 +1,8 @@
 let app = new Vue ({
     el : '#miapp',
     data : {
-        corrente:0,
+        corrente: 0,
+        scorri: null,
         elementi : [
             {
                 image : 'img/01.jpg',
@@ -49,10 +50,29 @@ let app = new Vue ({
             if (this.corrente < 0){
                 this.corrente = this.elementi.lenght -1;
             }
+        },
+        imageSelect:function(posizione){
+            this.corrente=posizione;
+        },
+        autoplay: function(){
+            this.scorri=setInterval(this.next,3000);
+        },
+        stoplay: function(){
+            clearInterval(this.scorri);
+            this.scorri=null;
         }
     }
 });
 
+//Bonus 3
+// mouseOn: function(){
+//     this.timer = setInterval(function() {
+//     start.next();
+//     }, 3000);
+// },
+// mouseOff: function(){
+//     clearInterval(this.timer);
+// }
 
 
 // const items = [

@@ -24,7 +24,7 @@
     font-weight: 100;
 }
 
-.titolo{
+.text{
     position: absolute;
     top: 415px;
     height: 250px;
@@ -34,7 +34,6 @@
     width: 98%;
     font-weight: bold;
 }
-
 
 .immagine-grande{
     width: 100%;

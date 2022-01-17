@@ -13,14 +13,16 @@
     <div id="miapp">
         <div class="container">
 
-            <div class="immagine-grande">
-                <img v-for="(element,index) in elementi" class="item" :src="element.image" :class="isCorrente(index)">
-                <h1 class="titolo">{{elementi[corrente].titolo}}</h1>
-                <h2 class="testo">{{elementi[corrente].testo}}</h2>
+            <div class="immagine-grande" @mouseover="stoplay" @mouseleave="autoplay">
+                <img :src="elementi[corrente].image">
+                <div class="text">
+                    <h3>{{elementi[corrente].titolo}}</h3>
+                    <h5>{{elementi[corrente].testo}}</h5>
+                </div>
             </div>
             
             <div class="immagine-piccola">
-                <img v-for="(element) in elementi" :src="element.image" class="piccola">    
+                <img v-for="(element,index) in elementi" :src="element.image" class="piccola" @click="imageSelect(index)" :class="isCorrente(index)">    
             </div>
 
             <div class="up">
