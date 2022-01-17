@@ -41,14 +41,14 @@ let app = new Vue ({
         },
         next: function(){
             this.corrente++;
-            if(this.corrente == this.elementi.lenght){
+            if(this.corrente == this.elementi.length){
                 this.corrente = 0;
             }
         },
         prev: function(){
             this.corrente --;
             if (this.corrente < 0){
-                this.corrente = this.elementi.lenght -1;
+                this.corrente = this.elementi.length -1;
             }
         },
         imageSelect:function(posizione){
