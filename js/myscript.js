@@ -64,16 +64,6 @@ let app = new Vue ({
     }
 });
 
-//Bonus 3
-// mouseOn: function(){
-//     this.timer = setInterval(function() {
-//     start.next();
-//     }, 3000);
-// },
-// mouseOff: function(){
-//     clearInterval(this.timer);
-// }
-
 
 // const items = [
 //     'img/01.jpg',
